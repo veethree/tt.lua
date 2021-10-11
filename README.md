@@ -83,6 +83,12 @@ tt:checkTriggers()
 ```
 Checks for triggers in the buffer. This is called internally, So you should never have to use it, but its available to you anway.
 
+# What's this useful for?
+Remember cheat codes in games? Those were the days. Well now with a little help from tt.lua you can bring those back.
+```lua
+tt:new("upupdowndownleftrightleftrightba", activate_cheat)
+```
+
 # Demo
 The demo is made for [löve](https://love2d.org)
 Its quite simple so here's the whole code:
