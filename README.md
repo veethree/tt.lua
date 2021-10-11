@@ -20,11 +20,6 @@ Next you can create your first trigger
 ```lua
 tt:new("hello", print, "Hello world!")
 ```
-The new function takes the following arguments:
-* triggerString: The trigger string for this trigger
-* triggerFunction: The function it should call
-* ...: Any number of arguments the trigger function will be called with.
-
 Now if you run your program and type "hello" it should print out "Hello world!"
 
 # Available functions
