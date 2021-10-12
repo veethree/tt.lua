@@ -69,6 +69,11 @@ Sets whether tt.lua will wait for the buffer to timeout before checking for trig
 * wait: Boolean. The default is `false`
 ##
 ```lua
+tt:setInputFilter(filter)
+```
+Sets an input filter function. The filter function is called before calling any trigger functions, If it returns false (or nil) the trigger function will not be called. Can be useful when you want to ignore input under certain circumstances.
+##
+```lua
 tt:clearBuffer()
 ```
 Clears the buffer
