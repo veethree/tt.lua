@@ -115,7 +115,8 @@ end
 
 -- Update: Should be called per frame, dt is Delta time, the time since the last frame in seconds.
 -- Techincally optional, But if not called, The buffer timeout feature won't work.
-function tt:update(dt)
+function tt:updateTimer(dt)
+    dt = dt or 1
     if #self.buffer > 0 then
         self.tick = self.tick + dt
         if self.tick > self.bufferTimeout then
