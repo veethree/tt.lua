@@ -10,9 +10,9 @@ Next, You must update the buffer. This function should be placed in a keypress c
 ```lua
 tt:updateBuffer(key)
 ```
-And with just those 2 lines, It will work. However for some functionality, tt.lua requires that you call the update function every frame, And pass delta time to it.
+And with just those 2 lines, It will work. However for some functionality, tt.lua requires that you call the updateTimer function every frame, And pass delta time to it.
 ```lua
-tt:update(dt)
+tt:updateTimer(dt)
 ```
 The functionality in question is buffer timeout, Which will automatically clear the buffer after a timeout. And 'wait for timeout', Which will wait for the buffer to timeout before checking for triggers. This is necessary if you want to have multiple triggers that start with the same characers.
 
@@ -45,7 +45,7 @@ Updates the buffer
 * key: The string to add to the buffer, Should usually be the key that was pressed.
 ##
 ```lua
-tt:update(dt)
+tt:updateTimer(dt)
 ```
 Updates the internal timer, Optional, But necessary for buffer timeout & wait for timeout to function.
 * dt: Delta time, Time passed since the last frame in seconds.
